@@ -1,149 +1,63 @@
 var app = angular.module('mesas', []);
 
-app.controller('MesasCtrl',['$scope',function($scope)
+app.controller('MesasCtrl',['$scope','$http',function($scope,$http)
 {
-	$scope.materias = 
-	[
-		{
-			nombre:"Algebra",
-			m1:
-				{
-					dia:02,
-					mes:01
-				},
-			m2:{
-					dia:02,
-					mes:02
-				}, 
-			m3:{
-					dia:02,
-					mes:03
-				},
-			m4:{
-					dia:02,
-					mes:04
-				}, 
-			m5:{
-					dia:02,
-					mes:05
-				},
-			m6:{
-					dia:02,
-					mes:06
-				}, 
-			m7:{
-					dia:02,
-					mes:07
-				}, 
-			m8:{
-					dia:02,
-					mes:08
-				}, 
-			m9:{
-					dia:02,
-					mes:09
-				}, 
-			m10:{
-					dia:02,
-					mes:10
-				}
-		},
-		{
-			nombre:"Administacion",
-			m1:
-				{
-					dia:02,
-					mes:01
-				},
-			m2:{
-					dia:02,
-					mes:02
-				}, 
-			m3:{
-					dia:02,
-					mes:03
-				},
-			m4:{
-					dia:02,
-					mes:04
-				}, 
-			m5:{
-					dia:02,
-					mes:05
-				},
-			m6:{
-					dia:02,
-					mes:06
-				}, 
-			m7:{
-					dia:02,
-					mes:07
-				}, 
-			m8:{
-					dia:02,
-					mes:08
-				}, 
-			m9:{
-					dia:02,
-					mes:09
-				}, 
-			m10:{
-					dia:02,
-					mes:10
-				}
-		}
-	];
+	 
+	$http.get("datos.json").success(function(data){
+		$scope.materias = data;
+		console.log(data);
+	});
 
 	$scope.num2mes =function(num)
 	{
 
 		switch(num)
 		{
-			case(01):
+			case("01"):
 				return "Enero";
 				break;
 
-			case(02):
+			case("02"):
 				return "Febrero";
 				break;
 
-			case(03):
+			case("03"):
 				return "Marzo";
 				break;
 
-			case(04):
+			case("04"):
 				return "Abril";
 				break;	
 
-			case(05):
+			case("05"):
 				return "Mayo";
 				break;	
 
-			case(06):
+			case("06"):
 				return "Junio";
 				break;
 
-			case(07):
+			case("07"):
 				return "Julio";
 				break;
 
-			case(08):
+			case("08"):
 				return "Agosto";
 				break;
 
-			case(09):
+			case("09"):
 				return "Septiembre";
 				break;
 
-			case(10):
+			case("10"):
 				return "Octubre";
 				break;	
 
-			case(11):
+			case("11"):
 				return "Noviembre";
 				break;
 
-			case(12):
+			case("12"):
 				return "Diciembre";
 				break;			
 

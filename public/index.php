@@ -12,17 +12,16 @@
    <table>
          <thead>
            <tr>
-               <th data-field="id">Nombre</th>
-               <th data-field="name">1°</th>
-               <th data-field="price">2°</th>
-               <th data-field="price">3°</th>
-               <th data-field="price">4°</th>
-               <th data-field="price">5°</th>
-               <th data-field="price">6°</th>
-               <th data-field="price">7°</th>
-               <th data-field="price">8°</th>
-               <th data-field="price">9°</th>
-               <th data-field="price">10°</th>
+               <th class="nombre">Nombre</th>
+               <th class="mesa">1°</th>
+               <th class="mesa">2°</th>
+               <th class="mesa">3°</th>
+               <th class="mesa">4°</th>
+               <th class="mesa">5°</th>
+               <th class="mesa">7°</th>
+               <th class="mesa">8°</th>
+               <th class="mesa">9°</th>
+               <th class="mesa">10°</th>
            </tr>
          </thead>
          <tbody>
