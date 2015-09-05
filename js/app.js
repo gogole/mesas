@@ -6,15 +6,29 @@ app.controller('MesasCtrl',['$scope',function($scope)
 	[
 		{
 			nombre:"Algebra",
-			a:"24-feb",
-			b:"10-mar",
-			c:"08-abr",
+			m1:"14-feb",
+			m2:"28-feb", 
+			m3:"21-mar",
+			m4:"16-may", 
+			m5:"11-jul",
+			m6:"01-ago", 
+			m7:"14-sep", 
+			m8:"24-oct", 
+			m9:"28-nov", 
+			m10:"19-dic" 
 		},
 		{
-			nombre:"Administracion",
-			a:"24-feb",
-			b:"10-mar",
-			c:"08-abr",
+			nombre:"Administacion",
+			m1:"14-feb",
+			m2:"28-feb", 
+			m3:"21-mar",
+			m4:"16-may", 
+			m5:"11-jul",
+			m6:"01-ago", 
+			m7:"14-sep", 
+			m8:"24-oct", 
+			m9:"28-nov", 
+			m10:"19-dic" 
 		}
 	]
 }]);
