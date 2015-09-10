@@ -4,7 +4,8 @@
   "private": true,
   "description": "Fechas de mesas",
   "scripts": {
-    "start": "node ./node_modules/grunt-cli/bin/grunt"
+   "start":"node server", 
+   "dev": "node ./node_modules/grunt-cli/bin/grunt"
   },
   "author": "Facundo Rubin <facundorubin@gmail.com>",
   "license": "MIT",
