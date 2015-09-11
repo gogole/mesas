@@ -22,8 +22,17 @@
   </nav>
 
  <div class="container" ng-controller="MesasCtrl">
-  <label for="email">Buscar</label>
-  <input type="text"  ng-model="filtro" placeholder="Ej: Arquitectura"/>
+  
+  <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input ng-model="filtro" placeholder="Nombre de la materia" id="first_name" type="text" class="validate">
+            <label for="first_name">Buscar</label>
+          </div>
+       </div>
+    </form>
+  </div>
    <table class="hoverable responsive-table">
          <thead>
            <tr>
@@ -113,7 +122,7 @@
           </div>
         </footer>
 
-
+  <script src="js/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.min.js"></script>
   <script src="js/angular.min.js"></script>
   <script src="js/app.js"></script>

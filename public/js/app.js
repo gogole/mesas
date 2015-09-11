@@ -5,7 +5,7 @@ app.controller('MesasCtrl',['$scope','$http',function($scope,$http)
 	 
 	$http.get("datos.json").success(function(data){
 		$scope.materias = data;
-		console.log(data);
+		//console.log(data);
 	});
 
 	$scope.num2mes =function(num)
