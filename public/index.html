@@ -8,8 +8,9 @@
    <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="css/materialize.min.css">
  </head>
- <body>
-  
+ <body background= "fondo.jpg">
+
+
   <nav>
     <div class="nav-wrapper  blue lighten-2">
       <a href="#" class="brand-logo">Mesas Examenes 2015</a>
@@ -22,7 +23,7 @@
   </nav>
 
  <div class="container" ng-controller="MesasCtrl">
-  
+
   <div class="row">
       <form class="col s12">
         <div class="row">
@@ -51,43 +52,43 @@
            <tr ng-repeat="materia in materias | filter: filtro">
              <td>{{materia.nombre}}</td>
                <td>
-                  <span>{{materia.m1.dia}}</span> 
+                  <span>{{materia.m1.dia}}</span>
                   <span>{{num2mes(materia.m1.mes)}}</span>
               </td>
               <td>
-                  <span>{{materia.m2.dia}}</span> 
+                  <span>{{materia.m2.dia}}</span>
                   <span>{{num2mes(materia.m2.mes)}}</span>
               </td>
                <td>
-                  <span>{{materia.m3.dia}}</span> 
+                  <span>{{materia.m3.dia}}</span>
                   <span>{{num2mes(materia.m3.mes)}}</span>
               </td>
                <td>
-                  <span>{{materia.m4.dia}}</span> 
+                  <span>{{materia.m4.dia}}</span>
                   <span>{{num2mes(materia.m4.mes)}}</span>
               </td>
                <td>
-                  <span>{{materia.m5.dia}}</span> 
+                  <span>{{materia.m5.dia}}</span>
                   <span>{{num2mes(materia.m5.mes)}}</span>
               </td>
                <td>
-                  <span>{{materia.m6.dia}}</span> 
+                  <span>{{materia.m6.dia}}</span>
                   <span>{{num2mes(materia.m6.mes)}}</span>
               </td>
                <td>
-                  <span>{{materia.m7.dia}}</span> 
+                  <span>{{materia.m7.dia}}</span>
                   <span>{{num2mes(materia.m7.mes)}}</span>
               </td>
                <td>
-                  <span>{{materia.m8.dia}}</span> 
+                  <span>{{materia.m8.dia}}</span>
                   <span>{{num2mes(materia.m8.mes)}}</span>
               </td>
                <td>
-                  <span>{{materia.m9.dia}}</span> 
+                  <span>{{materia.m9.dia}}</span>
                   <span>{{num2mes(materia.m9.mes)}}</span>
               </td>
                <td>
-                  <span>{{materia.m10.dia}}</span> 
+                  <span>{{materia.m10.dia}}</span>
                   <span>{{num2mes(materia.m10.mes)}}</span>
               </td>
            </tr>
@@ -126,4 +127,4 @@
   <script src="js/angular.min.js"></script>
   <script src="js/app.js"></script>
 </body>
-</html> 
+</html>
