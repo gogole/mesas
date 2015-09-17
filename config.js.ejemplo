@@ -2,10 +2,11 @@ module.exports =
 {
 	db:
 	{
-		host:"localhost",
-		puerto:3600,
-		user:'root',
-		password:''
+		host:DB_HOST || "localhost",
+		puerto: 3600,
+		user: DB_PASS || 'root',
+		password: DB_PASS || 'pass',
+		database:'Materias'
 	},
 	server:
 	{
