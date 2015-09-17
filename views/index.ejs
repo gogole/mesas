@@ -22,10 +22,10 @@
       </ul>-->
     </div>
   </nav>
+<div  ng-controller="MesasCtrl">
+ <div class="container" ng-hide="tengoDatos">
 
- <div class="container" ng-controller="MesasCtrl">
-
-  <div class="row">
+  <div class="row" >
       <form class="col s12">
         <div class="row">
           <div class="input-field col s12">
@@ -54,49 +54,56 @@
            <tr ng-repeat="materia in materias | filter: filtro">
              <td>{{materia.nombre}}</td>
                <td>
-                  <span>{{materia.m1.dia}}</span>
-                  <span>{{num2mes(materia.m1.mes)}}</span>
-              </td>
-              <td>
-                  <span>{{materia.m2.dia}}</span>
-                  <span>{{num2mes(materia.m2.mes)}}</span>
-              </td>
+                  <span>{{materia.fechas[0]}}</span>
+               </td>
                <td>
-                  <span>{{materia.m3.dia}}</span>
-                  <span>{{num2mes(materia.m3.mes)}}</span>
-              </td>
+                  <span>{{materia.fechas[1]}}</span>
+               </td>
                <td>
-                  <span>{{materia.m4.dia}}</span>
-                  <span>{{num2mes(materia.m4.mes)}}</span>
-              </td>
+                  <span>{{materia.fechas[2]}}</span>
+               </td>
                <td>
-                  <span>{{materia.m5.dia}}</span>
-                  <span>{{num2mes(materia.m5.mes)}}</span>
-              </td>
+                  <span>{{materia.fechas[3]}}</span>
+               </td>
                <td>
-                  <span>{{materia.m6.dia}}</span>
-                  <span>{{num2mes(materia.m6.mes)}}</span>
-              </td>
+                  <span>{{materia.fechas[4]}}</span>
+               </td>
                <td>
-                  <span>{{materia.m7.dia}}</span>
-                  <span>{{num2mes(materia.m7.mes)}}</span>
-              </td>
+                  <span>{{materia.fechas[5]}}</span>
+               </td>
                <td>
-                  <span>{{materia.m8.dia}}</span>
-                  <span>{{num2mes(materia.m8.mes)}}</span>
-              </td>
+                  <span>{{materia.fechas[6]}}</span>
+               </td>
                <td>
-                  <span>{{materia.m9.dia}}</span>
-                  <span>{{num2mes(materia.m9.mes)}}</span>
-              </td>
+                  <span>{{materia.fechas[7]}}</span>
+               </td>
                <td>
-                  <span>{{materia.m10.dia}}</span>
-                  <span>{{num2mes(materia.m10.mes)}}</span>
-              </td>
+                  <span>{{materia.fechas[8]}}</span>
+               </td>
+               <td>
+                  <span>{{materia.fechas[9]}}</span>
+               </td>
            </tr>
          </tbody>
        </table>
   </div>
+
+  <div ng-show="tengoDatos" class="load">
+      <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+     <p>Cargando...</p>
+    </div>    
+
+</div>
 
   <footer class="page-footer teal lighten-2">
           <div class="container">
