@@ -11,4 +11,10 @@ app.get('/',function(req,res)
 	res.send('public/index')
 });
 
+app.get('/',function(req,res)
+{
+	res.send('public/prueba')
+});
+
+
 app.listen(process.env.PORT || 8000);
