@@ -18,9 +18,31 @@ router.get('/api/mesas',function(req,res)
 	 // Use the connection
 	connection.query( 'SELECT * FROM Materias', function(err, rows) {
 	    connection.release();
-	    res.json(rows);
+	    res.json(rows.map(filtro));
   });
 });
 });
+
+var filtro = function(mesa)
+{
+	var dato = 
+	{
+		nombre : mesa.nombre_materia,
+		fechas : new Array()
+	};
+
+	dato.fechas.push(mesa.primer_turno);
+	dato.fechas.push(mesa.segundo_turno);
+	dato.fechas.push(mesa.tercer_turno);
+	dato.fechas.push(mesa.cuarto_turno);
+	dato.fechas.push(mesa.quinto_turno);
+	dato.fechas.push(mesa.sexto_turno);
+	dato.fechas.push(mesa.septimo_turno);
+	dato.fechas.push(mesa.octavo_turno);
+	dato.fechas.push(mesa.noveno_turno);
+	dato.fechas.push(mesa.decimo_turno);
+
+	return dato;
+}
 
 module.exports = router;
