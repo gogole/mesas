@@ -1,20 +1,21 @@
 var express = require('express');
+var api		= require('./controllers/api');
+var config  = require('./config').server;
 
 app = express();
 
 app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
 
 app.use(express.static('public'));
 
 app.get('/',function(req,res)
 {
-	res.send('public/index')
+	res.render('index')
 });
 
-app.get('/prueba',function(req,res)
-{
-	res.send('public/prueba')
+app.use(api);
+
+app.listen(config.puerto,function(){
+	console.log('El server esta corriendo en el puerto '+config.puerto);
 });
-
-
-app.listen(process.env.PORT || 8000);

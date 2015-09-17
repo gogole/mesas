@@ -1,0 +1,14 @@
+module.exports = 
+{
+	db:
+	{
+		host:"localhost",
+		puerto:3600,
+		user:'root',
+		password:''
+	},
+	server:
+	{
+		puerto: process.env.PORT || 8000
+	}
+}
