@@ -28,20 +28,21 @@ var filtro = function(mesa)
 	var dato = 
 	{
 		nombre : mesa.nombre_materia,
-		fechas : new Array()
+		fechas : new Array(
+			mesa.primer_turno,
+			mesa.segundo_turno,
+			mesa.tercer_turno,
+			mesa.cuarto_turno,
+			mesa.quinto_turno,
+			mesa.sexto_turno,
+			mesa.septimo_turno,
+			mesa.octavo_turno,
+			mesa.noveno_turno,
+			mesa.decimo_turno
+			),
+		año_materia : mesa.año_materia,
+		carrera : mesa.carrera 
 	};
-
-	dato.fechas.push(mesa.primer_turno);
-	dato.fechas.push(mesa.segundo_turno);
-	dato.fechas.push(mesa.tercer_turno);
-	dato.fechas.push(mesa.cuarto_turno);
-	dato.fechas.push(mesa.quinto_turno);
-	dato.fechas.push(mesa.sexto_turno);
-	dato.fechas.push(mesa.septimo_turno);
-	dato.fechas.push(mesa.octavo_turno);
-	dato.fechas.push(mesa.noveno_turno);
-	dato.fechas.push(mesa.decimo_turno);
-
 	return dato;
 }
 
