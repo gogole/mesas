@@ -51,7 +51,7 @@
            </tr>
          </thead>
          <tbody>
-           <tr ng-repeat="materia in materias | filter: filtro">
+           <tr ng-repeat="materia in materias | filter:ignorarAcentos">
              <td>{{materia.nombre}}</td>
                <td>
                   <span>{{materia.fechas[0]}}</span>
