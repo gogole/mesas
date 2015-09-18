@@ -4,7 +4,7 @@ app.controller('MesasCtrl',['$scope','$http',function($scope,$http)
 {	
 	$scope.tengoDatos=false;
 	 
-	$http.get("api/mesas").success(function(data){
+	$http.get("datos.json").success(function(data){
 		$scope.materias = data;
 		$scope.tengoDatos=true;
 		//console.log(data);
