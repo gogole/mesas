@@ -2,11 +2,10 @@ var app = angular.module('mesas', []);
 
 app.controller('MesasCtrl',['$scope','$http',function($scope,$http)
 {	
-	$scope.tengoDatos=false;
-	 
 	$http.get("api/mesas").success(function(data){
 		$scope.materias = data;
-		$scope.tengoDatos=true;
+        $('#load').hide();
+		$('#tabla').fadeIn(2000);
 		//console.log(data);
 	});
 

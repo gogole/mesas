@@ -23,7 +23,7 @@
     </div>
   </nav>
 <div  ng-controller="MesasCtrl">
- <div class="container" ng-show="tengoDatos">
+ <div class="container oculto" id="tabla">
 
   <div class="row" >
       <form class="col s12">
@@ -88,7 +88,7 @@
        </table>
   </div>
 
-  <div ng-hide="tengoDatos" class="load">
+  <div ng-hide="tengoDatos" class="load" id='load'>
       <div class="preloader-wrapper big active">
         <div class="spinner-layer spinner-blue-only">
           <div class="circle-clipper left">
