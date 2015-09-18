@@ -9,3 +9,10 @@ body
 	text-align: center;
 	font-size: 1.4em;
 }
+.white-link
+{
+	line-height:35px;
+	color:white;
+	font-weight: bold; 
+	text-decoration: underline
+}
