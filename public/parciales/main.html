@@ -1,0 +1,82 @@
+<div  ng-controller="MesasCtrl">
+ <div class="container oculto" id="tabla">
+
+  <div class="row" >
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input ng-model="filtro" placeholder="Buscar" id="filtro" type="text" class="validate">
+          </div>
+       </div>
+    </form>
+  </div>
+   <table class="hoverable responsive-table">
+         <thead>
+           <tr>
+               <th class="nombre">Nombre</th>
+               <th class="mesa">1°</th>
+               <th class="mesa">2°</th>
+               <th class="mesa">3°</th>
+               <th class="mesa">4°</th>
+               <th class="mesa">5°</th>
+               <th class="mesa">6°</th>
+               <th class="mesa">7°</th>
+               <th class="mesa">8°</th>
+               <th class="mesa">9°</th>
+               <th class="mesa">10°</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr ng-repeat="materia in materias | filter:ignorarAcentos">
+             <td>{{materia.nombre}}</td>
+               <td>
+                  <span>{{materia.fechas[0]}}</span>
+               </td>
+               <td>
+                  <span>{{materia.fechas[1]}}</span>
+               </td>
+               <td>
+                  <span>{{materia.fechas[2]}}</span>
+               </td>
+               <td>
+                  <span>{{materia.fechas[3]}}</span>
+               </td>
+               <td>
+                  <span>{{materia.fechas[4]}}</span>
+               </td>
+               <td>
+                  <span>{{materia.fechas[5]}}</span>
+               </td>
+               <td>
+                  <span>{{materia.fechas[6]}}</span>
+               </td>
+               <td>
+                  <span>{{materia.fechas[7]}}</span>
+               </td>
+               <td>
+                  <span>{{materia.fechas[8]}}</span>
+               </td>
+               <td>
+                  <span>{{materia.fechas[9]}}</span>
+               </td>
+           </tr>
+         </tbody>
+       </table>
+  </div>
+
+  <div ng-hide="tengoDatos" class="load" id='load'>
+      <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+     <p>Cargando...</p>
+    </div>
+
+</div>
