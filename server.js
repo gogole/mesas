@@ -14,6 +14,12 @@ app.get('/',function(req,res)
 	res.render('index')
 });
 
+app.get('/datos',function(req,res)
+{
+	res.json(datos);
+});
+
+
 app.use(api);
 
 app.listen(config.puerto,function(){
