@@ -1,16 +1,10 @@
 var app = angular.module('mesas', ['ngRoute']);
 
-app.config(function($locationProvider,$routeProvider){
-	
-	$locationProvider.html5Mode({
-	  enabled: true,
-	  requireBase: false
-	});
-	
+app.config(function($routeProvider){
 	$routeProvider
 	  .when('/',{ 
 	     templateUrl:'parciales/lista.html',
-	     controller: 'MateriasCtrl'
+	     controller: 'MesasCtrl'
 	  })
 	  .when('/mesas',{ 
 	     templateUrl:'parciales/main.html',

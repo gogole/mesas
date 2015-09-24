@@ -1,19 +1,41 @@
-<div class="row" ng-controller="MateriasCtrl">
-  <div class="col s12" >
-    <ul class="collection" ng-repeat="materia in materias">
+<div class="row" ng-controller="MesasCtrl">
+ <div class="oculto" id="contenido">
+   <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input ng-model="filtro" placeholder="Buscar" id="filtro" type="text" class="validate">
+            </div>
+         </div>
+      </form>
+    <div class="col s12">
+      <ul class="collection" ng-repeat="materia in materias | filter:filtro">
 
-      <li class="collection-item avatar">
-       <i class="material-icons circle blue">insert_chart</i>
-        <span class="title">{{materia.nombre}}</span>
-        <p>{{materia.ano}}° año<br>
-           {{materia.cuatrimestre}}° Cuatrimestre
-        </p>
-          <a href="#!" class="secondary-content">
-            <i class="material-icons">done</i>
-            <i class="material-icons">send</i>
-          </a>
-      </li>
-  
-  </ul>
+        <li class="collection-item avatar">
+         <i class="material-icons circle blue">insert_chart</i>
+          <span class="title">{{materia.nombre}}</span>
+          <p>{{materia.ano}}° año<br>
+             {{materia.cuatrimestre}}° Cuatrimestre
+          </p>
+            <a href="#!" class="secondary-content">
+              <i class="material-icons">send</i>
+            </a>
+        </li>
+    </ul>
+  </div>
 </div>
+  <div ng-hide="tengoDatos" class="load" id='load'>
+      <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+     <p>Cargando...</p>
+    </div>
+
 </div>

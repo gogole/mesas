@@ -1,10 +1,9 @@
 app.controller('MesasCtrl',['$scope','$http','MateriasFactory',function($scope,$http,materias)
 {	
-
     materias.getAll(
             function(data){
                 $('#load').hide();
-                $('#tabla').fadeIn(2000);
+                $('#contenido').fadeIn(2000);
                 $scope.materias=data;
             });
 
