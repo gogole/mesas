@@ -9,6 +9,10 @@ app.config(function($locationProvider,$routeProvider){
 	
 	$routeProvider
 	  .when('/',{ 
+	     templateUrl:'parciales/lista.html',
+	     controller: 'MateriasCtrl'
+	  })
+	  .when('/mesas',{ 
 	     templateUrl:'parciales/main.html',
 	     controller: 'MesasCtrl'
 	  })
