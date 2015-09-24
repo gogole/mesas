@@ -746,5 +746,5 @@
 								"regular":[]
 							},
 	"carrera": "Lic. en Sistemas de Información"
-},
+}
 ]

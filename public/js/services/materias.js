@@ -2,10 +2,12 @@ app.factory('MateriasFactory',['$http',function($http)
 {
 	var factory={};
     
+	factory.datos=[];
+	
     factory.getAll= function(cb)
 	    {
-	        $http.get("api/mesas")
+	        $http.get("datos.js")
 		        .success(cb);
-	    }
+	    };
     return factory;
 }]);

@@ -8,15 +8,15 @@
          </div>
       </form>
     <div class="col s12">
-      <ul class="collection" ng-repeat="materia in materias | filter:filtro">
+      <ul class="collection" ng-repeat="materia in materias | filter:ignorarAcentos">
 
         <li class="collection-item avatar">
          <i class="material-icons circle blue">insert_chart</i>
           <span class="title">{{materia.nombre}}</span>
           <p>{{materia.ano}}° año<br>
-             {{materia.cuatrimestre}}° Cuatrimestre
+             {{materia.id}}° Cuatrimestre
           </p>
-            <a href="#!" class="secondary-content">
+            <a href="#/materia/{{materia.id}}" class="secondary-content">
               <i class="material-icons">send</i>
             </a>
         </li>

@@ -10,4 +10,11 @@ app.config(function($routeProvider){
 	     templateUrl:'parciales/main.html',
 	     controller: 'MesasCtrl'
 	  })
+	  .when('/materia/:id',{ 
+	     templateUrl:'parciales/detalle.html',
+	     controller: 'DetalleCtrl'
+	  })
+	  .otherwise({
+        redirectTo: '/'
+      });
 });

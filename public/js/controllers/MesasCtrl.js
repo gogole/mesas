@@ -1,4 +1,4 @@
-app.controller('MesasCtrl',['$scope','$http','MateriasFactory',function($scope,$http,materias)
+app.controller('MesasCtrl',['$scope','MateriasFactory',function($scope,materias)
 {	
     materias.getAll(
             function(data){
