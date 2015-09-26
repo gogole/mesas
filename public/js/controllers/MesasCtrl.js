@@ -1,11 +1,17 @@
-app.controller('MesasCtrl',['$scope','MateriasFactory',function($scope,materias)
+app.controller('MesasCtrl',['$scope','MateriasFactory',function($scope,MateriasFactory)
 {	
-    materias.getAll(
-            function(data){
-                $('#load').hide();
-                $('#contenido').fadeIn(2000);
-                $scope.materias=data;
-            });
+ 
+ $scope.materias= MateriasFactory;
+
+     $scope.materias.$loaded()
+      .then(function() {
+        console.log($scope.materias);
+         $('#load').hide();
+         $('#contenido').fadeIn(2000);
+      })
+      .catch(function(err) {
+        console.error(err);
+      });
 
 	function borrarAcentos(valor) {
         return valor

@@ -1,4 +1,4 @@
-var app = angular.module('mesas', ['ngRoute']);
+var app = angular.module('mesas', ['ngRoute',"firebase"]);
 
 app.config(function($routeProvider){
 	$routeProvider

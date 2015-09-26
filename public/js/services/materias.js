@@ -1,13 +1,6 @@
-app.factory('MateriasFactory',['$http',function($http)
+app.factory('MateriasFactory',['$http','$firebaseArray',function($http,$firebaseArray)
 {
-	var factory={};
-    
-	factory.datos=[];
+	var ref = new Firebase("https:mesas.firebaseio.com/");
 	
-    factory.getAll= function(cb)
-	    {
-	        $http.get("datos.js")
-		        .success(cb);
-	    };
-    return factory;
+    return $firebaseArray(ref);
 }]);
