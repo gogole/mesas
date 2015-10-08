@@ -6,7 +6,7 @@ app.factory('MateriasFactory',['$http',function($http)
 	
     factory.getAll= function(cb)
 	    {
-	        $http.get("datos.js")
+	        $http.get("api/mesas")
 		        .success(cb);
 	    };
     return factory;
